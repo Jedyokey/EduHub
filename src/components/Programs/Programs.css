@@ -40,3 +40,15 @@
     opacity: 1;
     padding-top: 0;
 }
+
+/* Media Queries */
+@media screen and (max-width: 650px) {
+    .programs {
+        flex-direction: column;
+    }
+    .programs .program {
+        flex-basis: 100%;
+        margin: 20px;
+    }
+    
+}

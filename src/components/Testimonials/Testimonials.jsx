@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Testimonials.css';
 import next_icon from '../../assets/next-icon.png';
 import back_icon from '../../assets/back-icon.png';
@@ -62,24 +62,32 @@ const testimonialsData = [
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 2 >= testimonialsData.length ? 0 : prevIndex + 2
+      isMobile
+        ? (prevIndex + 1) % testimonialsData.length
+        : (prevIndex + 2) % testimonialsData.length
     );
   };
 
   const handleBack = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonialsData.length - 2 : prevIndex - 2
+      isMobile
+        ? (prevIndex - 1 + testimonialsData.length) % testimonialsData.length
+        : (prevIndex - 2 + testimonialsData.length) % testimonialsData.length
     );
   };
-
-    // const visibleSlides = 2;
-    // const slideWidth = 100 / visibleSlides;
-    // style={{
-    //     transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)`,
-    //   }}
 
   return (
     <div className="testimonials">
@@ -90,7 +98,7 @@ const Testimonials = () => {
             <div
                 className="slides" 
                 style={{
-                    transform: `translateX(-${currentIndex * 50}%)`,
+                    transform: `translateX(-${currentIndex * (isMobile ? 100 : 50)}%)`,
                 }}
             >
                 {testimonialsData.map(({ id, name, location, image, feedback }) => (
@@ -101,7 +109,6 @@ const Testimonials = () => {
                                 <h3>{name}</h3>
                                 <span>{location}</span>
                             </div>
-                            {/* <p>{feedback}</p> */}
                         </div>
                         <p>{feedback}</p>
                     </div>

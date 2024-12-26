@@ -1,123 +1,142 @@
 .testimonials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 2rem;
-    background-color: rgba(240, 250, 255, 0.9);
-    border-radius: 10px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  background-color: rgba(240, 250, 255, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
   }
   
+.testimonials .back-btn,
+.testimonials .next-btn {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  border-radius: 50%;
+  background-color: #212ea0;
+  padding: 15px;
+}
+
+.testimonials .back-btn {
+  left: 10px;
+}
+
+.testimonials .next-btn {
+  right: 10px;
+}
+
+.testimonials .back-btn img,
+.testimonials .next-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider {
+  width: 80%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 calc(50% - 26.5px);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: #fff;
+  margin: 0 10px;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.user-info img {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #212ea0;
+}
+
+.user-info h3 {
+  font-size: 1.3rem;
+  color: #212ea0;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.user-info span {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.slide p {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 0.3rem;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  .testimonials {
+    padding: 1rem;
+    overflow-x: hidden;
+  }
+  .testimonials .back-btn, .testimonials .next-btn {
+    width: 35px;
+    padding: 8px;
+  }
+  /* .slide {
+    flex: 0 0 calc(100% - 29px);
+  } */
+  .slide {
+    flex: 0 0 calc(100% - 29px);
+    padding: 1.5rem;
+    margin-right: 20px;
+}
+
   .testimonials .back-btn,
   .testimonials .next-btn {
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    border-radius: 50%;
-    background-color: #212ea0;
-    padding: 15px;
+    width: 30px;
+    height: 30px;
   }
-  
-  .testimonials .back-btn {
-    left: 10px;
-  }
-  
-  .testimonials .next-btn {
-    right: 10px;
-  }
-  
-  .testimonials .back-btn img,
-  .testimonials .next-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  .slider {
-    width: 80%;
-    overflow: hidden;
-  }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide {
-    flex: 0 0 calc(50% - 26.5px);
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    background: #fff;
-    margin: 0 10px;
-    border-radius: 8px;
-    margin-right: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
   .user-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 15px;
+    flex-direction: column;
+    text-align: center;
   }
-  
+
   .user-info img {
-    width: 65px;
-    height: 65px;
-    margin-right: 10px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #212ea0;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
   }
-  
+
   .user-info h3 {
-    font-size: 1.3rem;
-    color: #212ea0;
-    margin: 0;
-    align-self: flex-start;
+    font-size: 1.2rem;
   }
-  
-  .user-info span {
-    align-self: flex-start;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
+
   .slide p {
-    font-size: 1rem;
-    color: #444;
-    margin-top: 0.3rem;
-    line-height: 1.5;
-    max-width: 600px;
+    font-size: 0.9rem;
+    text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .slide {
-      flex: 0 0 100%;
-    }
-  
-    .testimonials .back-btn,
-    .testimonials .next-btn {
-      width: 30px;
-      height: 30px;
-    }
-  
-    .user-info img {
-      width: 60px;
-      height: 60px;
-    }
-  
-    .user-info h3 {
-      font-size: 1.2rem;
-    }
-  
-    .slide p {
-      font-size: 0.9rem;
-    }
-  }
-  
+}

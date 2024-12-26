@@ -45,3 +45,25 @@
     color: #676767;
     margin-bottom: 15px;
 }
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    .about {
+        flex-direction: column;
+    }
+    .about .about-left {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        order: 2;
+    }
+    .about .about-right {
+        flex-basis: 100%;
+        /* text-align: center; */
+    }
+    .about-right h3 {
+        font-size: 14px;
+    }
+    .about-right h2 {
+        font-size: 30px;
+    }
+}

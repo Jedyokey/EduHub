@@ -24,3 +24,52 @@ nav ul li {
     background-color: #212ea0;
     transition: 0.5s;
 }
+.menu-icon {
+    display: none;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+    nav .logo {
+        width: 140px;
+    }
+    nav ul li {
+        margin: 5px 15px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 840px) {
+    nav {
+        padding: 10px 0;
+    }
+    nav ul {
+        /* flex-direction: column; */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #212ea0;
+        z-index: -1;
+        width: 200px;
+        padding-top: 70px;
+        transition: 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px 40px;
+        font-size: 16px;
+    }
+    .menu-icon {
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        /* position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 10; */
+    }
+    .hide-mobile-menu {
+        right: -200px;
+    }
+}

@@ -39,7 +39,7 @@ const Contact = () => {
             <p>Feel free to reach us through contact form or find our contact information below. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our university community.</p>
             <ul>
                 <li><img src={mail_icon} alt="" />Admin@Edusity.dev</li>
-                <li><img src={phone_icon} alt="" />+225 123 456 789</li>
+                <li><img src={phone_icon} alt="" />+225 07 65 123 456</li>
                 <li>
                     <img src={location_icon} alt="" />
                     Rue des Jardins, Cocody, Abidjan, 01 BP 1234, Côte d'Ivoire.
