@@ -29,7 +29,7 @@
     .campus {
         margin: 40px auto;
     }
-    /* .campus .gallery img {
-        width: 100%;
-    } */
+    .campus .gallery {
+        margin-bottom: 25px;
+    }
 }
