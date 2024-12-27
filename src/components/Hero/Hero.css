@@ -3,7 +3,7 @@
     min-height: 100vh;
     background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url("../../assets/hero.png");
     background-size: cover;
-    background-position: center;
+    background-position: center; 
     color: #fff;
     display: flex;
     align-items: center;
@@ -34,6 +34,9 @@
     }
 }
 @media screen and (max-width: 650px) {
+    .hero {
+        background-attachment: scroll;
+    } 
     .hero .hero-text h1 {
         font-size: 30px;
         max-width: 400px;
@@ -42,6 +45,5 @@
     .hero .hero-text p {
         font-size: 14px;
         margin: 15px auto 30px;
-    }
-    
+    } 
 }

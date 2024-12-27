@@ -12,3 +12,14 @@
     margin-top: 5px;
     text-transform: none;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+    /* .title {
+        margin: 50px 0 20px;
+    } */
+    .title h2 {
+        font-size: 28px;
+    }
+}

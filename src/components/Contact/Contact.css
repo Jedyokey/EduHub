@@ -80,5 +80,26 @@
         margin-bottom: 10px;
         font-size: 14px;
     }
+}
 
+@media screen and (max-width: 500px) {
+    .contact {
+        margin: 30px auto;
+    }
+    .contact-col h3 {
+        font-size: 20px;
+    }
+    .contact-col p {
+        font-size: 14px;
+    }
+    .contact-col ul li {
+        font-size: 13px;
+    }
+    .contact form input, .contact form textarea {
+        font-size: 14px;
+    }
+    .contact-col span {
+        font-size: 14px;
+    }
+    
 }

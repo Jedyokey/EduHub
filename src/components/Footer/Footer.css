@@ -1,5 +1,6 @@
 .footer {
     color: #fff;
+    font-family: Arial, sans-serif;
   }
   
   .footer-top {
@@ -7,17 +8,19 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    /* background-color: #212ea0; */
     background-color: #1a237e;
+    flex-wrap: wrap; /* Allows wrapping for smaller widths */
   }
   
   .footer-logo img {
     width: 120px;
+    margin-bottom: 20px;
   }
   
   .footer-links {
     display: flex;
     gap: 90px;
+    flex-wrap: wrap; /* Adjusts layout for smaller screens */
   }
   
   .footer-links ul {
@@ -29,6 +32,7 @@
     margin-bottom: 10px;
     font-size: 14px;
     cursor: pointer;
+    transition: color 0.3s ease;
   }
   
   .footer-links li:hover {
@@ -43,7 +47,7 @@
   
   .footer-icons svg {
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
   }
   
   .footer-icons svg:hover {
@@ -62,30 +66,41 @@
     margin: 0;
     line-height: 1.6;
   }
-
+  
+  .footer-bottom .call-icon {
+    vertical-align: middle;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  
   /* Media Queries */
   /* For Tablets (768px and below) */
-@media screen and (max-width: 768px) {
-    
+  @media screen and (max-width: 768px) {
     .footer-top {
-        padding: 20px 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
-      }
-      .footer-links {
-        display: flex;
-        gap: 60px;
-      }
-      .footer-bottom p  {
-        width: 85%;
-        margin: 0 auto;
+      padding: 20px 5%;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .footer-links {
+      gap: 60px;
+      justify-content: center; /* Centers links on smaller screens */
+    }
+  
+    .footer-links ul {
+      text-align: center;
     }
   
     .footer-icons {
       justify-content: center;
+      gap: 10px;
+    }
+  
+    .footer-bottom p {
+      width: 85%;
+      margin: 0 auto;
+      font-size: 13px;
     }
   }
   
@@ -93,19 +108,30 @@
   @media screen and (max-width: 480px) {
     .footer-top {
       padding: 20px 5%;
+      text-align: center; /* Aligns content for smaller screens */
     }
+  
     .footer-links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      } 
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .footer-links ul {
+      text-align: center;
+    }
   
     .footer-icons {
-      gap: 10px; 
+      gap: 10px;
     }
   
     .footer-bottom {
       font-size: 12px;
       padding: 15px 0;
     }
+  
+    .footer-bottom .call-icon {
+      font-size: 14px;
+    }
   }
+  

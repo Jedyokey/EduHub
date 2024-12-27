@@ -48,7 +48,7 @@ const Footer = () => {
             <p>
                 © 2024 Edusity University. All rights reserved. <br />
                 Rue des Jardins, Cocody, Abidjan, 01 BP 1234, Côte d'Ivoire.  
-                +225 07 65 123 456 <MdCall className="call-icon" />
+                <MdCall className="call-icon" /> +225 07 65 123 456 
             </p>
       </div>
     </footer>

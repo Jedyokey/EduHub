@@ -24,3 +24,12 @@
         margin-bottom: 25px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .campus {
+        margin: 40px auto;
+    }
+    /* .campus .gallery img {
+        width: 100%;
+    } */
+}

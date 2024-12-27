@@ -27,6 +27,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 .about-right h3 {
     font-weight: 600;
@@ -65,5 +66,17 @@
     }
     .about-right h2 {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about {
+        margin: 20px auto;
+    }
+    .about .about-img {
+        height: 300px;
+    }
+    .about-right h2 {
+        font-size: 25px;
     }
 }
