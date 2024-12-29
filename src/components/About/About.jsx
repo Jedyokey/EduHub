@@ -12,7 +12,7 @@ const About = ({ setPlayState }) => {
         </div> 
 
         <div className="about-right">
-            <h3>ABOUT UNIVERSIY</h3>
+            <h3>ABOUT UNIVERSITY</h3>
             <h2>Nurturing Tomorrow's Leaders Today</h2>
             <p>At Edusity, we are dedicated to empowering learners of all ages by providing accessible, high-quality educational resources. Our mission is to foster a love for learning, encourage curiosity, and support personal and professional growth. </p>
             <p>Our team comprises passionate educators, industry professionals, and technology enthusiasts who collaborate to create engaging and informative content. We believe that education is a lifelong journey, and our goal is to make this journey as enriching and enjoyable as possible.</p>
