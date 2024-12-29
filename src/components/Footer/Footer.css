@@ -58,6 +58,8 @@
     border: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
     margin-bottom: 10px;
     font-size: 14px;
     outline: none;
