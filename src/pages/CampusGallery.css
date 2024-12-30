@@ -1,0 +1,126 @@
+/* Fix the overlap caused by the sticky navbar */
+.campus-gallery {
+    padding: 100px 10%; /* Add padding to the top */
+    text-align: center;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    color: #333;
+    background-color: rgba(163, 205, 241, 0.391);
+  }
+  
+  .campus-gallery h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #002d72; /* Matches Edusity branding */
+  }
+  
+  .campus-gallery p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Style the gallery images container */
+  .gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-images img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style the back button */
+  .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #002d72;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #004aad;
+  }
+  
+/* Responsive Design */
+
+/* Tablets (768px and above) */
+@media (max-width: 1024px) {
+    .gallery-images img {
+      width: 200px;
+      height: 150px;
+    }
+  
+    .campus-gallery h2 {
+      font-size: 2rem;
+    }
+  
+    .campus-gallery p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Mobile Devices (768px and below) */
+  @media (max-width: 768px) {
+    .gallery-images img {
+      width: 180px;
+      height: 130px;
+    }
+  
+    .campus-gallery {
+      padding: 80px 5%;
+    }
+  
+    .campus-gallery h2 {
+      font-size: 1.8rem;
+    }
+  
+    .campus-gallery p {
+      font-size: 0.9rem;
+    }
+  
+    .back-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Small Mobile Devices (480px and below) */
+  @media (max-width: 480px) {
+    .gallery-images img {
+      width: 150px;
+      height: 110px;
+    }
+  
+    .campus-gallery h2 {
+      font-size: 1.5rem;
+    }
+  
+    .campus-gallery p {
+      font-size: 0.8rem;
+    }
+  
+    .back-button {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+  }
