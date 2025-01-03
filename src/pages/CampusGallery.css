@@ -106,9 +106,12 @@
   
   /* Small Mobile Devices (480px and below) */
   @media (max-width: 480px) {
+    .gallery-images {
+        flex-basis: 100%; 
+    }
     .gallery-images img {
-      width: 150px;
-      height: 110px;
+      width: 100%; 
+      height: 190px;
     }
   
     .campus-gallery h2 {

@@ -21,20 +21,21 @@ const CampusGallery = () => {
     <div className="campus-gallery" id='campus-gallery'>
       <h2>Campus Gallery</h2>
       <p>Here are more photos from our campus:</p>
+      
       {/* Add gallery images here */}
       <div className="gallery-images">
-        <img src={gallery_1} alt="Campus 1" />
-        <img src={gallery_2} alt="Campus 2" />
-        <img src={gallery_3} alt="Campus 3" />
-        <img src={gallery_4} alt="Campus 3" />
-        <img src={gallery_5} alt="" />
-        <img src={gallery_6} alt="" />
-        <img src={gallery_7} alt="" />
-        <img src={gallery_8} alt="" />
-        <img src={gallery_9} alt="" />
-        <img src={gallery_10} alt="" />
-        <img src={campus_1} alt="" />
-        <img src={campus_2} alt="" />
+            <img src={gallery_1} alt="Campus 1" />
+            <img src={gallery_2} alt="Campus 2" />
+            <img src={gallery_3} alt="Campus 3" />
+            <img src={gallery_4} alt="Campus 3" />
+            <img src={gallery_5} alt="" />
+            <img src={gallery_6} alt="" />
+            <img src={gallery_7} alt="" />
+            <img src={gallery_8} alt="" />
+            <img src={gallery_9} alt="" />
+            <img src={gallery_10} alt="" />
+            <img src={campus_1} alt="" />
+            <img src={campus_2} alt="" />
       </div>
       <button onClick={() => navigate(-1)} className="back-button">
         Go Back
