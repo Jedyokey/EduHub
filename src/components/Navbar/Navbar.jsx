@@ -2,121 +2,143 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import menu_icon from "../../assets/menu-icon.png";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const location = useLocation();
 
-  // Handle sticky navbar on scroll
+  // Determine if the current page is the homepage
+  const isHomePage = location.pathname === "/";
+
   useEffect(() => {
-    const handleScroll = () => {
-      window.scrollY > 50 ? setSticky(true) : setSticky(false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (isHomePage) {
+      const handleScroll = () => {
+        window.scrollY > 50 ? setSticky(true) : setSticky(false);
+      };
 
-  // Close menu when clicking on a link
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    } else {
+      setSticky(false);
+    }
+  }, [isHomePage]);
+
   const handleNavLinkClick = () => {
     setMobileMenu(false);
   };
 
-  // Toggle menu on menu icon click
   const handleMenuToggle = () => {
     setMobileMenu(!mobileMenu);
   };
 
+  const sections = {
+    hero: "hero",
+    program: "program",
+    about: "about",
+    campus: "campus",
+    testimonials: "testimonials",
+    contact: "contact",
+  };
+
   return (
     <>
-      <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-        <Link to="hero" smooth={true} offset={0} duration={500}>
-          <img src={logo} alt="Logo" className="logo" />
-        </Link>
+      <nav className={`container ${
+          sticky ? "dark-nav" : ""
+        } ${location.pathname === "/campus-gallery" ? "fixed-bg" : ""}`}>
+        {isHomePage ? (
+          <ScrollLink
+            to={sections.hero}
+            smooth={true}
+            duration={500}
+            className="logo-link"
+            onClick={handleNavLinkClick}
+          >
+            <img src={logo} alt="Logo" className="logo" />
+          </ScrollLink>
+        ) : (
+          <RouterLink to="/" onClick={handleNavLinkClick}>
+            <img src={logo} alt="Logo" className="logo" />
+          </RouterLink>
+        )}
 
         <ul className={mobileMenu ? "mobile-menu" : "hide-mobile-menu"}>
+          {/* Navigation links */}
           <li>
-            <Link
-              to="hero"
-              smooth={true}
-              offset={0}
-              duration={500}
-              onClick={handleNavLinkClick}
-            >
-              Home
-            </Link>
+            {isHomePage ? (
+              <ScrollLink to={sections.hero} smooth={true} duration={500} onClick={handleNavLinkClick}>
+                Home
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/" onClick={handleNavLinkClick}>
+                Home
+              </RouterLink>
+            )}
           </li>
           <li>
-            <Link
-              to="program"
-              smooth={true}
-              offset={-260}
-              duration={500}
-              onClick={handleNavLinkClick}
-            >
-              Program
-            </Link>
+            {isHomePage ? (
+              <ScrollLink to={sections.program} smooth={true} duration={500} offset={-260} onClick={handleNavLinkClick}>
+                Program
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/" state={{ scrollTo: sections.program }} onClick={handleNavLinkClick}>
+                Program
+              </RouterLink>
+            )}
           </li>
           <li>
-            <Link
-              to="about"
-              smooth={true}
-              offset={-150}
-              duration={500}
-              onClick={handleNavLinkClick}
-            >
-              About
-            </Link>
+            {isHomePage ? (
+              <ScrollLink to={sections.about} smooth={true} duration={500} offset={-150} onClick={handleNavLinkClick}>
+                About
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/" state={{ scrollTo: sections.about }} onClick={handleNavLinkClick}>
+                About
+              </RouterLink>
+            )}
           </li>
           <li>
-            <Link
-              to="campus"
-              smooth={true}
-              offset={-260}
-              duration={500}
-              onClick={handleNavLinkClick}
-            >
-              Campus
-            </Link>
+            {isHomePage ? (
+              <ScrollLink to={sections.campus} smooth={true} duration={500} offset={-260} onClick={handleNavLinkClick}>
+                Campus
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/campus-gallery" onClick={handleNavLinkClick}>
+                Campus
+              </RouterLink>
+            )}
           </li>
           <li>
-            <Link
-              to="testimonials"
-              smooth={true}
-              offset={-235}
-              duration={500}
-              onClick={handleNavLinkClick}
-            >
-              Testimonials
-            </Link>
+            {isHomePage ? (
+              <ScrollLink to={sections.testimonials} smooth={true} duration={500} offset={-235} onClick={handleNavLinkClick}>
+                Testimonials
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/" state={{ scrollTo: sections.testimonials }} onClick={handleNavLinkClick}>
+                Testimonials
+              </RouterLink>
+            )}
           </li>
           <li>
-            <Link
-              to="contact"
-              smooth={true}
-              offset={-220}
-              duration={500}
-              className="btn"
-              onClick={handleNavLinkClick}
-            >
-              Contact us
-            </Link>
+            {isHomePage ? (
+              <ScrollLink to={sections.contact} smooth={true} duration={500} offset={-220} className="btn" onClick={handleNavLinkClick}>
+                Contact us
+              </ScrollLink>
+            ) : (
+              <RouterLink to="/" state={{ scrollTo: sections.contact }} className="btn" onClick={handleNavLinkClick}>
+                Contact us
+              </RouterLink>
+            )}
           </li>
         </ul>
 
-        <img
-          src={menu_icon}
-          alt="Menu Icon"
-          className="menu-icon"
-          onClick={handleMenuToggle}
-        />
+        <img src={menu_icon} alt="Menu Icon" className="menu-icon" onClick={handleMenuToggle} />
       </nav>
 
       {/* Overlay for closing menu when clicking outside */}
-      <div
-        className={`nav-overlay ${mobileMenu ? "show" : ""}`}
-        onClick={() => setMobileMenu(false)}
-      ></div>
+      <div className={`nav-overlay ${mobileMenu ? "show" : ""}`} onClick={() => setMobileMenu(false)}></div>
     </>
   );
 };

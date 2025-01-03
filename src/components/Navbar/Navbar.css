@@ -1,3 +1,4 @@
+/* General Navbar Styles */
 nav {
     width: 100%;
     color: #fff;
@@ -9,12 +10,15 @@ nav {
     align-items: center;
     justify-content: space-between;
     z-index: 1000; /* Ensures navbar appears above other content */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+/* Navbar Logo */
 nav .logo {
     width: 180px;
 }
 
+/* Navbar Links */
 nav ul {
     display: flex; /* Default flex for larger screens */
     align-items: center;
@@ -39,19 +43,30 @@ nav a:hover {
     color: #f0a500; /* Highlight color on hover */
 }
 
+/* Sticky Background for Scroll */
 .dark-nav {
-    background-color: #212ea0;
+    /* background-color: #212ea0;  */
+    background-color: #002d72;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.5s;
 }
 
+/* Fixed Background for Specific Routes */
+.fixed-bg {
+    background-color: #002d72; /* Fixed background color for routes like campus-gallery */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Menu Icon */
 .menu-icon {
     display: none;
     cursor: pointer;
     z-index: 1500; /* Ensure it remains clickable */
 }
 
-/* Media Queries for Responsive Design */
+/* Responsive Design */
 
+/* Medium Screens */
 @media screen and (max-width: 1000px) {
     nav .logo {
         width: 140px;
@@ -62,6 +77,7 @@ nav a:hover {
     }
 }
 
+/* Small Screens */
 @media screen and (max-width: 840px) {
     nav {
         padding: 10px 0;
@@ -104,7 +120,7 @@ nav a:hover {
     }
 }
 
-/* Overlay for click outside detection */
+/* Overlay for Click Outside Detection */
 .nav-overlay {
     display: none; /* Hidden by default */
     position: fixed;
