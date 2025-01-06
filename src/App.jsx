@@ -11,7 +11,8 @@ import Testimonials from './components/Testimonials/Testimonials';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import CampusGallery from './pages/CampusGallery';
+import ExploreMore from './pages/ExploreMore/ExploreMore';
+import CampusGallery from './pages/CampusGallery/CampusGallery';
 
 const sections = {
   hero: 'hero',
@@ -66,6 +67,7 @@ const App = () => {
               </div>
             }
           />
+          <Route path="/explore-more" element={<ExploreMore />} />
           <Route path="/campus-gallery" element={<CampusGallery />} />
         </Routes>
         <Footer />

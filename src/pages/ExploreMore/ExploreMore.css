@@ -1,0 +1,454 @@
+.explore-more {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hero Section */
+.explore-more .hero-explore-more {
+    background: linear-gradient(rgba(7, 7, 7, 0.6), rgba(8, 8, 8, 0.629)), 
+    url('../../assets/student-life-6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+.explore-more  .hero-content {
+    z-index: 10;
+  }
+  
+.explore-more  .hero-explore-more h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+ .explore-more .hero-explore-more p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+.explore-more  .hero-explore-more .btn {
+    font-size: 1rem;
+    padding: 14px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+ .explore-more .hero .btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* About the School Section */
+.explore-more  .about-school {
+    padding: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+  }
+  
+  .about-school h2 {
+    font-size: 2rem;
+    color: #000f38;
+    margin-bottom: 20px;
+  }
+  
+  .about-school p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  .about-school-left {
+    flex: 1;
+  }
+  .about-school-left button {
+    font-size: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .image-placeholder {
+    margin-top: 30px;
+  }
+  
+  .image-placeholder img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+    /* Counter Section */
+  .counter {
+    background: linear-gradient(rgba(16, 16, 16, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../../assets/student-life-8.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0 90px;
+  }
+
+  .figures {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 80px 10%;
+    color: white;
+  }
+  .figures div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px sandybrown solid;
+    padding: 20px 50px;
+    background: #0000008e;
+    width: 240px;
+  }
+  .figures div span:nth-child(1) { 
+    font-size: 3rem;
+    color: #f0a500;
+    font-weight: bold;
+  }
+  .figures div span:nth-child(2) {
+    font-size: 1.9rem;
+  }
+  
+  /* Card Section (Courses) */
+  .courses-section {
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0 100px;
+  }
+  
+  .courses-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #000f38;
+  }
+  
+  .courses-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; 
+    margin: 20px 0 40px;
+  }
+
+  .courses-grid p {
+    margin-bottom: 10px;
+  }
+
+  .courses-section button {
+    font-size: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .courses-section button:hover {
+    background-color: #4CAF50;
+  }
+
+  .testimonial-container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Testimonial Section */
+.testimonial-title {
+    margin-bottom: -40px;
+    margin-top: -30px;
+}
+
+.student-testimonials {
+    margin: 0 0 100px;
+  }
+  
+  .student-testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000f38;
+  }
+  
+  .student-testimonials .testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .student-testimonials .testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .student-testimonials .testimonial p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Lates News Section */
+.news-cards-section {
+    padding: 0 10%;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+  }
+  
+  .news-cards-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000f38;
+    margin-bottom: 10px;
+  }
+  
+  .news-cards-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .news-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  /* Call-to-Action Section */
+  .call-to-action {
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .call-to-action h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .call-to-action p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .call-to-action .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .call-to-action .btn:hover {
+    background-color: #f1f1f1;
+  }
+  
+
+
+  /* Responsive Design for Different Devices */
+
+/* Large Screens (Desktops) */
+@media (min-width: 1024px) {
+    .explore-more .about-school {
+      flex-direction: row;
+      gap: 80px;
+    }
+  
+    .figures div {
+      width: 240px;
+    }
+  }
+  
+  /* Medium Screens (Tablets) */
+  @media (max-width: 1024px) {
+    .explore-more .hero-explore-more h1 {
+        font-size: 2.5rem;
+    }
+    .explore-more .hero-explore-more {
+        height: 50vh;
+    }
+    .explore-more .about-school {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .about-school h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-school p {
+      font-size: 1rem;
+    }
+  
+    .figures {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .figures div {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    .news-cards-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  /* Small Screens (Mobile Phones) */
+  @media (max-width: 768px) {
+    .explore-more .hero-explore-more h1 {
+      font-size: 2rem;
+    }
+  
+    .explore-more .hero-explore-more p {
+      font-size: 1rem;
+    }
+  
+    .explore-more .hero-explore-more .btn {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  
+    .explore-more .about-school {
+      padding: 50px 10%;
+      gap: 20px;
+    }
+  
+    .about-school h2 {
+      font-size: 1.6rem;
+    }
+  
+    .about-school p {
+      font-size: 0.95rem;
+    }
+  
+    .figures {
+      padding: 50px 5%;
+    }
+  
+    .figures div {
+      padding: 15px 30px;
+    }
+  
+    .figures div span:nth-child(1) {
+      font-size: 2.5rem;
+    }
+  
+    .figures div span:nth-child(2) {
+      font-size: 1.5rem;
+    }
+  
+    .news-cards-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+  
+    .courses-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+  
+    .call-to-action h2 {
+      font-size: 2rem;
+    }
+  
+    .call-to-action p {
+      font-size: 1rem;
+    }
+  
+    .call-to-action .btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Extra Small Screens (Very Small Mobile Phones) */
+    .explore-more .hero-explore-more {
+        height: 50vh;
+    }
+  @media (max-width: 480px) {
+    .explore-more .hero-explore-more h1 {
+      font-size: 1.5rem;
+    }
+  
+    .explore-more .hero-explore-more p {
+      font-size: 0.85rem;
+    }
+  
+    .explore-more .hero-explore-more .btn {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  
+    .explore-more .about-school {
+      padding: 30px 5%;
+      gap: 5px;
+    }
+  
+    .about-school h2 {
+      font-size: 1.4rem;
+    }
+  
+    .about-school p {
+      font-size: 0.85rem;
+    }
+  
+    .figures div {
+      padding: 10px 20px;
+      width: 100%;
+    }
+  
+    .figures div span:nth-child(1) {
+      font-size: 2rem;
+    }
+  
+    .figures div span:nth-child(2) {
+      font-size: 1.3rem;
+    }
+  
+    .news-cards-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .courses-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .call-to-action h2 {
+      font-size: 1.5rem;
+    }
+  
+    .call-to-action p {
+      font-size: 0.85rem;
+    }
+  
+    .call-to-action .btn {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  }
