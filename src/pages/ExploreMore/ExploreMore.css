@@ -1,5 +1,6 @@
 .explore-more {
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
   }
   
   /* Hero Section */
@@ -418,6 +419,7 @@
   
     .about-school h2 {
       font-size: 1.4rem;
+      text-align: center;
     }
   
     .about-school p {

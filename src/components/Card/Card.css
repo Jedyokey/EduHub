@@ -43,52 +43,74 @@
   
   .card-footer {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
     gap: 12px;
     padding: 16px;
     border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
   }
-  
+
   .professor-info {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
+    gap: 10px;
   }
   
-  .professor-icon {
+  .professor-image-container {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #4CAF50; 
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .professor-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .professor-name {
     color: #007bff;
   }
-  
+
   .professor-title {
-    font-style: italic;
-    color: #555;
+    color: #777;
+    font-size: 0.8rem;
   }
   
   .card-stats {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 15px;
   }
-  
-  .stat {
+
+  .stat, .rating {
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 0.9rem;
-  }
-  
-  .rating {
-    display: flex;
-    gap: 4px;
-    color: #ffd700;
+    gap: 5px;
   }
   
   .rating svg {
-    font-size: 1rem;
+    color: #f0a500; /* Star color */
   }
   
-  .card:hover .professor-info {
-    color: #007bff;
+
+  /* Responsive styles */
+@media screen and (max-width: 768px) {
+  .professor-image-container {
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid #4CAF50; 
   }
-  
+}
+
+@media screen and (max-width: 480px) {
+  .professor-image-container {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid #4CAF50;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
 import { FaStar, FaStarHalfAlt, FaRegStar, FaUserAlt, FaHeart } from "react-icons/fa";
+import { MdPeople } from "react-icons/md";
 
 const Card = ({ 
     title, description, image, professor, rating, likes, students 
@@ -18,13 +19,17 @@ const Card = ({
 
       <div className="card-footer">
             <div className="professor-info">
-                <FaUserAlt className="professor-icon" />
-                <span>{professor.name}</span> 
-                <span className="professor-title">/ {professor.title}</span>
+              <div className="professor-image-container">
+                <img src={professor.image} alt={professor.name} className="professor-image" />
+              </div>
+              <div className="professor-details">
+                <span className="professor-name">{professor.name}</span>
+                <span className="professor-title"> / {professor.title}</span>
+              </div>
             </div>
             <div className="card-stats">
                 <div className="stat">
-                    <FaUserAlt /> <span>{students}</span>
+                <MdPeople /> <span>{students}</span>
                 </div>
                 <div className="stat">
                     <FaHeart /> <span>{likes}</span>
