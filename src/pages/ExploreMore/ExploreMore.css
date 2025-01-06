@@ -206,7 +206,7 @@
     margin: 0;
 }
 
-/* Lates News Section */
+/* Latest News Section */
 .news-cards-section {
     padding: 0 10%;
     background-color: #f9f9f9;
@@ -386,6 +386,12 @@
       padding: 8px 16px;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .testimonial-title {
+        margin-bottom: -20px;
+    }
+  }
   
   /* Extra Small Screens (Very Small Mobile Phones) */
     .explore-more .hero-explore-more {
@@ -437,6 +443,13 @@
   
     .courses-grid {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    .testimonial-title {
+        margin-bottom: -15px;
+    }
+    .testimonial-title h2 {
+        font-size: 1.5rem;
     }
   
     .call-to-action h2 {

@@ -1,7 +1,6 @@
 import gallery_1 from "./assets/gallery-1.png";
 import gallery_2 from "./assets/gallery-2.png";
 import gallery_3 from "./assets/gallery-3.png";
-// import student_life_7 from "./assets/student-life-7.jpg";
 import facility_4 from "./assets/facility-4.jpeg"
 import campus_1 from "./assets/campus-1.jpeg"
 import campus_2 from "./assets/campus-2.jpeg"

@@ -12,9 +12,12 @@ const Navbar = () => {
 
   // Determine if the current page is the homepage
   const isHomePage = location.pathname === "/";
+  const isExploreMorePage = location.pathname === "/explore-more";
+  const isCampusGalleryPage = location.pathname === "/campus-gallery";
 
   useEffect(() => {
-    if (isHomePage) {
+    if (isHomePage || isExploreMorePage) {
+      // Apply the sticky class for homepage and explore-more page
       const handleScroll = () => {
         window.scrollY > 50 ? setSticky(true) : setSticky(false);
       };
@@ -24,7 +27,7 @@ const Navbar = () => {
     } else {
       setSticky(false);
     }
-  }, [isHomePage]);
+  }, [isHomePage, isExploreMorePage]);
 
   const handleNavLinkClick = () => {
     setMobileMenu(false);
@@ -45,9 +48,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`container ${
-          sticky ? "dark-nav" : ""
-        } ${location.pathname === "/campus-gallery" ? "fixed-bg" : ""}`}>
+      <nav 
+        className={`
+            container ${
+            sticky ? "dark-nav" : ""
+          } ${isCampusGalleryPage ? "fixed-bg" : ""}`
+        }
+      >
         {isHomePage ? (
           <ScrollLink
             to={sections.hero}
