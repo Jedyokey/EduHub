@@ -94,7 +94,7 @@ const App = () => {
             <Route path="/campus-gallery" element={<CampusGallery />} />
           </Routes>
           <Footer />
-          <BackToTop />  
+          {!playVideo && <BackToTop />}  
         </ScrollToSectionWrapper>
       )}
     </Router>
