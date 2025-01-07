@@ -435,12 +435,14 @@
       font-size: 1.3rem;
     }
   
-    .news-cards-container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
     .courses-grid {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    .courses-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #000f38;
     }
 
     .testimonial-title {
@@ -449,11 +451,18 @@
     .testimonial-title h2 {
         font-size: 1.5rem;
     }
+
+    .news-cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .news-cards-section h2 {
+        font-size: 1.5rem;
+    }
   
     .call-to-action h2 {
       font-size: 1.5rem;
     }
-  
     .call-to-action p {
       font-size: 0.85rem;
     }
