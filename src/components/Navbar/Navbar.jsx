@@ -10,7 +10,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const location = useLocation();
 
-  // Determine if the current page is the homepage
+  // Check if the current page matches specific routes: homepage, explore more, or campus gallery
   const isHomePage = location.pathname === "/";
   const isExploreMorePage = location.pathname === "/explore-more";
   const isCampusGalleryPage = location.pathname === "/campus-gallery";
@@ -50,9 +50,8 @@ const Navbar = () => {
     <>
       <nav 
         className={`
-            container ${
-            sticky ? "dark-nav" : ""
-          } ${isCampusGalleryPage ? "fixed-bg" : ""}`
+            container ${sticky ? "dark-nav" : ""} 
+            ${isCampusGalleryPage ? "fixed-bg" : ""}`
         }
       >
         {isHomePage ? (

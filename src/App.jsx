@@ -87,14 +87,19 @@ const App = () => {
                     <Contact />
                   </div>
                   <VideoPlayer playState={playVideo} setPlayState={setPlayVideo} />
+                  {!playVideo && <BackToTop />} {/* Render BackToTop only on homepage */}
                 </div>
               }
             />
-            <Route path="/explore-more" element={<ExploreMore />} />
+            <Route path="/explore-more" element={
+              <>
+                <ExploreMore />
+                {!playVideo && <BackToTop />} {/* Render BackToTop on explore-more */}
+              </>
+            } />
             <Route path="/campus-gallery" element={<CampusGallery />} />
           </Routes>
           <Footer />
-          {!playVideo && <BackToTop />}  
         </ScrollToSectionWrapper>
       )}
     </Router>

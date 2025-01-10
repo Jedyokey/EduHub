@@ -9,7 +9,7 @@
     padding: 15px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
+    z-index: 900; /* Adjusted z-index to ensure it is below the mobile menu */
     transition: background-color 0.3s ease;
     font-size: 1.5rem; 
   }
