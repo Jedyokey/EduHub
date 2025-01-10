@@ -121,12 +121,6 @@ nav a:hover {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .menu-icon {
-        right: 40px;
-    }
-}
-
 /* Overlay for Click Outside Detection */
 .nav-overlay {
     display: none; /* Hidden by default */

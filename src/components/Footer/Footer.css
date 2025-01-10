@@ -199,4 +199,15 @@
       font-size: 14px;
     }
   }
+
+  @media screen and (max-width: 390px) {
+    .footer form input[type=email] {
+      padding: 10px;
+      font-size: 16px;
+    }
+    .footer form button {
+      padding: 0 10px;
+    }
+    
+  }
   
