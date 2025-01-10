@@ -475,3 +475,10 @@
       padding: 6px 12px;
     }
   }
+
+  @media screen and (max-width: 390px) {
+    .explore-more .hero-explore-more h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+  }
