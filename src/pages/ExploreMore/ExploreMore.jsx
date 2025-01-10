@@ -138,7 +138,6 @@ const ExploreMore = () => {
             </div>
         </section>
 
-
         {/* Call to Action */}
         <section className="call-to-action">
             <h2>Ready to Join Us?</h2>
@@ -148,7 +147,6 @@ const ExploreMore = () => {
                     Apply Now
             </button>
        </section>
-
     </div>
   );
 };

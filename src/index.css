@@ -74,6 +74,9 @@ a {
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+    }
     .container {
         padding-left: 5%;
         padding-right: 5%;

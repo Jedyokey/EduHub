@@ -395,6 +395,9 @@
   
   /* Extra Small Screens (Very Small Mobile Phones) */
   @media (max-width: 480px) {
+    .explore-more {
+        overflow-x: hidden;
+    }
     .explore-more .hero-explore-more h1 {
       font-size: 1.5rem;
     }
